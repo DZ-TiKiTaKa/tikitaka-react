@@ -11,26 +11,30 @@ import Blog from './pages/Blog';
 import User from './pages/User';
 import Chat from './pages/Chat';
 import NotFound from './pages/Page404';
+import Profile from './pages/Profile';
+import UpdateProfile from './pages/UpdateProfile';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   return useRoutes([
     {
-      path: '/dashboard',
+      path: '/',
       element: <DashboardLayout />,
       children: [
-        { element: <Navigate to="/dashboard/app" replace /> },
+        { element: <Navigate to="/app" replace /> },
         { path: 'app', element: <DashboardApp /> },
         { path: 'user', element: <User /> },
         { path: 'chat', element: <Chat /> },
         { path: 'products', element: <Products /> },
-        { path: 'blog', element: <Blog /> }
+        { path: 'blog', element: <Blog /> },
+        { path: 'changeProfile', element: <UpdateProfile /> },
+        { path: 'profile', element: <Profile /> }
       ]
     },
     {
       path: '/',
-      element: <LogoOnlyLayout />,
+      element: <DashboardLayout />,
       children: [
         { path: 'login', element: <Login /> },
         { path: 'register', element: <Register /> },

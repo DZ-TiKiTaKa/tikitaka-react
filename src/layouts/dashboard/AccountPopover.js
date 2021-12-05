@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import { Icon } from '@iconify/react';
 import { useRef, useState } from 'react';
 import homeFill from '@iconify/icons-eva/home-fill';
@@ -16,20 +18,11 @@ import account from '../../_mocks_/account';
 
 const MENU_OPTIONS = [
   {
-    label: 'Home',
-    icon: homeFill,
-    linkTo: '/'
-  },
-  {
     label: 'Profile',
     icon: personFill,
-    linkTo: '#'
-  },
-  {
-    label: 'Settings',
-    icon: settings2Fill,
-    linkTo: '#'
+    linkTo: '/profile'
   }
+  
 ];
 
 // ----------------------------------------------------------------------
